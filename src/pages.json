@@ -1,0 +1,167 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
+	"window": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Hey!farmer",
+		"navigationBarBackgroundColor": "#00c170",
+		"backgroundColor": "#00c170"
+	  },
+	"pages": [
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#00c170",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/bbs/index",
+			"style": {
+				"navigationBarTitleText": "论坛",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/shopcar/index",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/center/index",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/shoplist/index",
+			"style": {
+				"navigationBarTitleText": "商品",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/goodsdetail/index",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+		{
+			"path": "pages/pay/index",
+			"style": {
+				"navigationBarTitleText": "支付"
+			}
+		},
+		{
+			"path": "pages/publish/index",
+			"style": {
+				"navigationBarTitleText": "发布"
+			}
+		},
+		{
+			"path": "pages/live/index",
+			"style": {
+				"navigationBarTitleText": "直播"
+			}
+		},
+		{
+			"path": "pages/center/center_collection/index",
+			"style": {
+				"navigationBarTitleText": "收藏"
+			}
+		},
+		{
+			"path": "pages/center/center_care/index",
+			"style": {
+				"navigationBarTitleText": "关注"
+			}
+		},
+		{
+			"path": "pages/center/center_foot/index",
+			"style": {
+				"navigationBarTitleText": "足迹"
+			}
+		},
+		{
+			"path": "pages/center/center_waitpay/index",
+			"style": {
+				"navigationBarTitleText": "待付款"
+			}
+		},
+		{
+			"path": "pages/center/center_waitreceive/index",
+			"style": {
+				"navigationBarTitleText": "待收货"
+			}
+		},
+		{
+			"path": "pages/center/center_refund/index",
+			"style": {
+				"navigationBarTitleText": "退款"
+			}
+		},
+		{
+			"path": "pages/center/center_totalorder/index",
+			"style": {
+				"navigationBarTitleText": "全部订单"
+			}
+		},
+		{
+			"path": "pages/center/center_address/index",
+			"style": {
+				"navigationBarTitleText": "我的地址"
+			}
+		},
+		{
+			"path": "pages/center/center_link/index",
+			"style": {
+				"navigationBarTitleText": "联系客服"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Hey!farmer",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#a9b7b7",
+		"selectedColor": "#11cd6e",
+		"borderStyle": "white",
+		"list": [
+			{
+				"selectedIconPath": "/static/首页选中.png",
+				"iconPath": "/static/首页.png",
+				"pagePath": "pages/home/index",
+				"text": "首页"
+			},
+			{
+				"selectedIconPath": "/static/发现选中.png",
+				"iconPath": "/static/发现.png",
+				"pagePath": "pages/bbs/index",
+				"text": "论坛"
+			},
+			{
+				"selectedIconPath": "/static/购物车选中.png",
+				"iconPath": "/static/购物车.png",
+				"pagePath": "pages/shopcar/index",
+				"text": "购物车"
+			},
+			{
+				"selectedIconPath": "/static/个人中心选中.png",
+				"iconPath": "/static/个人中心.png",
+				"pagePath": "pages/center/index",
+				"text": "我的"
+			}
+		]
+	}
+}
