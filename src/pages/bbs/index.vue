@@ -29,6 +29,7 @@
                   class="sglist-item"
                   v-for="(item, index) in recommendlist"
                   :key="index"
+                  url="/pages/bbs/bbs_essay/index"
                 >
                   <view class="sglist-view">
                     <view class="sglist-title">

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#00c170",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "uni-card": "/node-modules/@dcloudio/uni-ui/lib/uni-card/uni-card",
+    "myheader": "/component/header/index"
+  }
+}

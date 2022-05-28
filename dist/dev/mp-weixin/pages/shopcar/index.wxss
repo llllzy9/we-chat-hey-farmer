@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cart-box.data-v-a4cc8710 {
+  background: #f4f3f3;
+}
+.cart-item.data-v-a4cc8710 {
+  margin-top: 20rpx;
+}
+.cart-view.data-v-a4cc8710 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20rpx;
+  font-size: 26rpx;
+  border-radius: 15rpx;
+  background: rgb(255, 255, 255);
+  box-shadow: -2rpx -5rpx 10rpx rgb(213, 213, 213);
+}
+.cart-view .selBtn.data-v-a4cc8710 {
+  width: 45rpx;
+  height: 45rpx;
+  margin-right: 20rpx;
+}
+.cart-view .goods-detail.data-v-a4cc8710 {
+  flex: 4;
+  display: flex;
+}
+.cart-view .goods-detail .goodsImg.data-v-a4cc8710 {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+}
+.cart-view .goods-detail .goodsInfo.data-v-a4cc8710 {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.cart-view .goods-detail .goodsInfo .goodsName.data-v-a4cc8710 {
+  font-size: 32rpx;
+  color: #333333;
+}
+.cart-view .goods-detail .goodsInfo .goodsParam.data-v-a4cc8710 {
+  margin: 5rpx 0 15rpx 0;
+  font-size: 28rpx;
+  color: #999999;
+}
+.cart-view .goods-detail .goodsInfo .goodsPrice.data-v-a4cc8710 {
+  color: #e60012;
+  font-size: 34rpx;
+}
+.cart-view .goods-detail .goodsInfo .goodsPrice text.data-v-a4cc8710 {
+  font-size: 28rpx;
+}
+.cart-view .countBox.data-v-a4cc8710 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.cart-view .countBox .num.data-v-a4cc8710 {
+  text-align: center;
+  width: 50rpx;
+  background: #f4f3f3;
+  margin: 0 20rpx;
+  border-radius: 30prx;
+}
+.bottomBtn.data-v-a4cc8710 {
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  width: 100vw;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(0, 0, 0);
+  box-shadow: -5rpx -2rpx 5rpx rgb(167, 166, 166);
+  z-index: 99;
+}
+.bottomBtn .selBtn.data-v-a4cc8710 {
+  margin-left: 20rpx;
+}
+.bottomBtn .price.data-v-a4cc8710 {
+  display: flex;
+  align-items: center;
+}
+.bottomBtn .price text.data-v-a4cc8710 {
+  font-weight: bold;
+  color: #e60012;
+}
+.bottomBtn .price .num.data-v-a4cc8710 {
+  font-size: 36rpx;
+}
+.bottomBtn .clearBtn.data-v-a4cc8710 {
+  width: 260rpx;
+  height: 80rpx;
+  background: #00c170;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 60rpx;
+  line-height: 80rpx;
+  margin-right: 20rpx;
+}
+.empty.data-v-a4cc8710 {
+  position: relative;
+  top: 220rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.empty-text.data-v-a4cc8710 {
+  color: #808080;
+  margin-bottom: 50rpx;
+  margin-top: 10rpx;
+}
+.empty-button.data-v-a4cc8710 {
+  width: 300rpx;
+  height: 90rpx;
+  color: #00c170;
+  border: 1rpx solid #00c170;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 48rpx;
+}

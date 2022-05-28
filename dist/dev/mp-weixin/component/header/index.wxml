@@ -1,0 +1,1 @@
+<view><view class="header"><view class="search"><view><icon class="icon" type="search" size="30rpx"></icon></view><view><input placeholder="西伯利亚土地"/></view><view><button>搜索</button></view></view></view></view>

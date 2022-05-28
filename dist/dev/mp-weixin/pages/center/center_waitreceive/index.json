@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "待收货",
+  "usingComponents": {
+    "goods-order": "/component/goods-order/index",
+    "myheader": "/component/header/index"
+  }
+}

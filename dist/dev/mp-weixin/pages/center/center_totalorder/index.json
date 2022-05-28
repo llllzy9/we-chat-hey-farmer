@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "全部订单",
+  "usingComponents": {
+    "goods-order": "/component/goods-order/index",
+    "myheader": "/component/header/index"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "足迹",
+  "usingComponents": {
+    "uni-segmented-control": "/node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control",
+    "myheader": "/component/header/index",
+    "foot": "/component/foot/index"
+  }
+}

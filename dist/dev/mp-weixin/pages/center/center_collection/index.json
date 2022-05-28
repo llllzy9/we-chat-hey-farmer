@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "收藏",
+  "usingComponents": {
+    "uni-segmented-control": "/node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control",
+    "myheader": "/component/header/index"
+  }
+}

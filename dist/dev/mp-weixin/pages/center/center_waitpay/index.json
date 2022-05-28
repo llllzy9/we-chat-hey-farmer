@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "待付款",
+  "usingComponents": {
+    "goods-order": "/component/goods-order/index",
+    "myheader": "/component/header/index"
+  }
+}

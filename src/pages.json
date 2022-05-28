@@ -125,6 +125,12 @@
 			"style": {
 				"navigationBarTitleText": "联系客服"
 			}
+		},
+		{
+			"path": "pages/bbs/bbs_essay/index",
+			"style": {
+				"navigationBarTitleText": "文章"
+			}
 		}
 	],
 	"globalStyle": {

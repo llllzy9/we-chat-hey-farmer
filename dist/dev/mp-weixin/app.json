@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/bbs/index",
+    "pages/shopcar/index",
+    "pages/center/index",
+    "pages/shoplist/index",
+    "pages/goodsdetail/index",
+    "pages/pay/index",
+    "pages/publish/index",
+    "pages/live/index",
+    "pages/center/center_collection/index",
+    "pages/center/center_care/index",
+    "pages/center/center_foot/index",
+    "pages/center/center_waitpay/index",
+    "pages/center/center_waitreceive/index",
+    "pages/center/center_refund/index",
+    "pages/center/center_totalorder/index",
+    "pages/center/center_address/index",
+    "pages/center/center_link/index",
+    "pages/bbs/bbs_essay/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Hey!farmer",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "/static/首页选中.png",
+        "iconPath": "/static/首页.png",
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/static/发现选中.png",
+        "iconPath": "/static/发现.png",
+        "pagePath": "pages/bbs/index",
+        "text": "论坛"
+      },
+      {
+        "selectedIconPath": "/static/购物车选中.png",
+        "iconPath": "/static/购物车.png",
+        "pagePath": "pages/shopcar/index",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "/static/个人中心选中.png",
+        "iconPath": "/static/个人中心.png",
+        "pagePath": "pages/center/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
