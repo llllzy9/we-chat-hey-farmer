@@ -26,6 +26,7 @@
 /* 文章场景相关 */
 .cart-box.data-v-a4cc8710 {
   background: #f4f3f3;
+  height: 90vh;
 }
 .cart-item.data-v-a4cc8710 {
   margin-top: 20rpx;

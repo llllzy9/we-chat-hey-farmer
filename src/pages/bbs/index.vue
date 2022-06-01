@@ -99,11 +99,10 @@
         </swiper>
         <view class="addcon">
           <button class="addbtn" @click="toggle('bottom')">
-            <uni-popup ref="popup" type="bottom"></uni-popup>
           </button>
           <!-- 底部弹窗 -->
           <view>
-            <uni-popup ref="popup" @change="change">
+            <uni-popup ref="popup">
               <view class="popup-content">
                 <navigator
                     url="/pages/publish/index"

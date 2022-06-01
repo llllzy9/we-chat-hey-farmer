@@ -1,5 +1,6 @@
 {
     "appid": "wxf38811eef2211181",
+    "projectname": "mp-weixin",
     "compileType": "miniprogram",
     "libVersion": "2.24.4",
     "packOptions": {
@@ -26,6 +27,7 @@
         "useStaticServer": true,
         "showES6CompileOption": false,
         "checkInvalidKey": true,
+        "compileHotReLoad": false,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -35,7 +37,6 @@
         "useCompilerPlugins": false,
         "minifyWXML": true
     },
-    "condition": {},
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4

@@ -1,7 +1,7 @@
 <template>
   <view class="car-count">
     <!-- 有商品的购物车 -->
-    <scroll-view class="cart-box" v-if="cartsList.length > 0">
+    <scroll-view class="cart-box" v-if="cartsList.length > 0" scroll-y="true">
       <view class="cart-item" v-for="(item, index) in cartsList" :key="item.id">
         <uni-swipe-action>
           <uni-swipe-action-item
@@ -69,13 +69,9 @@
 
 
 <script>
-import uniBadge from "../../component/uni-swipe-action/uni-swipe-action.vue";
+
 export default {
   name: "FarmerIndex",
-  components: {
-    uniBadge,
-  },
-
   data() {
     return {
       options: [
@@ -134,6 +130,15 @@ export default {
           num: 2,
           flag: false,
         },
+        {
+          id: 5,
+          img: "https://images.pexels.com/photos/539855/pexels-photo-539855.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          name: "绿土地",
+          param: "2m²",
+          price: "121",
+          num: 2,
+          flag: false,
+        },
       ],
       lay_type: 0,
       num: 0,
@@ -145,9 +150,14 @@ export default {
 
   mounted() {
     this.getTotalPrice();
+
+  },
+  computed:{
+    
   },
 
   methods: {
+    //获取总价
     getTotalPrice() {
       let price = 0;
       this.cartsList.map((item, index) => {
@@ -182,9 +192,11 @@ export default {
       console.log("当前状态：" + e + "，下标：" + index);
     },
     del(index) {
-      this.cartsList.splice(index, 1);
+      this.cartsList.splice(index, 0);
       this.getTotalPrice();
+      console.log(index);
     },
+    //全选
     selected(item) {
       item.flag = !item.flag;
       if (!item.flag) {
@@ -223,6 +235,7 @@ export default {
 <style lang="scss" scoped>
 .cart-box {
   background: #f4f3f3;
+  height: 90vh;
 }
 .cart-item {
   margin-top: 20rpx;

@@ -1,5 +1,5 @@
 <template>
-  <div class="essay-view">
+  <scroll-view class="essay-view" scroll-y="true">
     <view class="essay-header">
       <view class="essayTitle">{{ essayList.title }}</view>
       <view class="essayuser">
@@ -14,61 +14,175 @@
         </view>
       </view>
     </view>
-    <view class="essay-container">{{ essayList.container }}</view>
-    <view class="essay-footer">
-      <view class="likeBtn">
-          <image src="../../../static/like.png" mode="aspectFit"></image>
-        <text class="likeNum">{{ essayList.likeNum }}</text>
-      </view>
-      <view class="comments">
-          <image src="../../../static/pinglun.png" mode="aspectFit"></image>
-        <text class="commentsNum">{{ essayList.commentsNum }}</text>
+    <view class="essay-container">
+      <view class="essay-content">{{ essayList.container.content }}</view>
+      <view
+        class="essay-img"
+        v-for="img in essayList.container.images"
+        :key="img.index"
+      >
+        <image
+          :src="img"
+          mode="aspectFit"
+          style="width: 700rpx; height: 500rpx"
+        ></image>
       </view>
     </view>
-  </div>
+    <!-- 底部 -->
+    <view class="essay-footer">
+      <view class="likeBtn" @click="changeLike" :isLike="isLike">
+        <uni-badge
+          class="uni-badge likeNum"
+          :text="getlikeNum"
+          absolute="rightTop"
+          :offset="[-2, 3]"
+          :customStyle="customStyle1"
+          maxNum="99999"
+        >
+          <image src="../../../static/like.png" mode="aspectFit" v-show="!isLike"></image>
+		  <image src="../../../static/likeSelected.png" mode="aspectFit" v-show="isLike"></image>
+        </uni-badge>
+      </view>
+      <view class="comments" @click="toggle('bottom')">
+        <uni-badge
+          class="uni-badge commentsNum"
+          :text="getcommentsNum"
+          absolute="rightTop"
+          :offset="[-2, 3]"
+          :customStyle="customStyle2"
+          maxNum="99999"
+        >
+          <image src="../../../static/pinglun.png" mode="aspectFit"></image>
+        </uni-badge>
+      </view>
+      <view>
+        <uni-fav
+          :checked="checkList[0]"
+          class="favBtn"
+          @click="favClick(0)"
+          circle="true"
+          bgColor="#fff"
+          bgColorChecked="#ff0000"
+        />
+      </view>
+    </view>
+    <!-- 底部弹窗 -->
+    <view>
+      <uni-popup ref="popup">
+        <view class="popup-content">
+          <comments></comments>
+        </view>
+      </uni-popup>
+    </view>
+  </scroll-view>
 </template>
 
 <script>
+import comments from "../../../component/comments/index.vue";
+//引入mapState
+ import { mapState } from 'vuex'
 export default {
   name: "WeChatHeyFarmerIndex",
-
+  components: {
+    comments,
+  },
   data() {
     return {
+      checkList: [false, false, false, false, false, false],
+      customStyle1: {
+        backgroundColor: "#00c170",
+        color: "#fff",
+      },
+      customStyle2: {
+        backgroundColor: "#fff",
+        color: "#888888",
+      },
+      isLike: false,
       essayList: {
         title: "如何实现禾下乘凉梦",
         username: "袁隆平院士",
         avatar:
           "https://images.pexels.com/photos/7944397/pexels-photo-7944397.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         time: "2020.10.15",
-        container: `禾下乘凉梦是 “杂交水稻之父”袁隆平对杂交水稻高产的一个理想追求，是袁隆平的中国梦，梦想到禾下乘凉，梦里水稻长得有高粱那么高，子粒有花生米那么大。
-        作为杂交水稻之父，袁隆平一直有两个梦，一个是禾下乘凉梦，一个是杂交水稻覆盖全球梦。`,
-        likeNum: 10,
-        commentsNum: 1,
+        container: {
+          content:
+            " 禾下乘凉梦是 “杂交水稻之父”袁隆平对杂交水稻高产的一个理想追求，是袁隆平的中国梦，梦想到禾下乘凉，梦里水稻长得有高粱那么高，子粒有花生米那么大。作为杂交水稻之父，袁隆平一直有两个梦，一个是禾下乘凉梦，一个是杂交水稻覆盖全球梦。",
+          images: [
+            "https://images.pexels.com/photos/2589457/pexels-photo-2589457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/3560020/pexels-photo-3560020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          ],
+        },
+        likeNum: '',
+        commentsNum:'',
       },
     };
   },
 
-  mounted() {},
-
-  methods: {},
+  mounted() {
+  },
+	computed:{
+			//获取store数据
+		getlikeNum(){
+			return this.$store.state.bbs.likeNum
+		},
+		getcommentsNum(){
+			return this.$store.state.bbs.commentsNum
+		}
+	},
+  methods: {
+	  //收藏
+    favClick(index) {
+      this.checkList[index] = !this.checkList[index];
+      console.log(this.checkList[index]);
+      this.$forceUpdate();
+    },
+	//点赞
+    changeLike() {
+      if (this.isLike) {
+		this.$store.commit('sumLike');
+        this.isLike = false;
+        uni.showToast({
+          title: "取消点赞",
+          duration: 500,
+        });
+      } else {
+		this.$store.commit('addLike');
+        this.isLike = true;
+        uni.showToast({
+          title: "点赞成功",
+          duration: 500,
+        });
+      }
+    },
+	//评论弹窗
+    toggle(type) {
+      this.$refs.popup.open(type);
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .essay-view {
-  padding: 0 30rpx;
+  background-color: #fbfbfb;
+  height: 92vh;
   .essay-header {
-    margin-top: 10rpx;
+    background-color: #fff;
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+
     .essayTitle {
       font-size: 38rpx;
       font-weight: 700;
       letter-spacing: 2rpx;
       padding: 10rpx;
     }
+
     .essayuser {
       display: flex;
       justify-content: flex-start;
       margin: 20rpx 0;
+
       .essayAvatar {
         image {
           width: 80rpx;
@@ -76,9 +190,11 @@ export default {
           border-radius: 60rpx;
         }
       }
+
       .userName {
         font-weight: 600;
       }
+
       .time {
         color: #aaa;
         font-size: 28rpx;
@@ -86,53 +202,80 @@ export default {
     }
   }
   .essay-container {
-      margin-top: 20rpx;
+    margin-top: 20rpx;
+    padding: 0 20rpx;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+    .essay-content {
       text-indent: 60rpx;
       line-height: 50rpx;
+    }
+    .essay-img {
+		margin-top: 0rpx;
+    }
   }
+
   .essay-footer {
-      width: 100vw;
-      height: 8vh;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      box-shadow: 2rpx 0rpx 7rpx #aaa;
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2rpx 0rpx 7rpx #aaa;
+
     .likeBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: $color;
-        width: 200rpx;
-        height: 70rpx;
-        border-radius: 30rpx;
-        justify-self: start;
-        image{
-            width: 50rpx;
-            height: 50rpx;
-        }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $color;
+      width: 200rpx;
+      height: 70rpx;
+      border-radius: 30rpx;
+      justify-self: start;
+
+      image {
+        width: 50rpx;
+        height: 50rpx;
+      }
+
       .likeNum {
-          font-size: 26rpx;
-          font-weight: 600;
-          color: white;
+        font-size: 26rpx;
+        font-weight: 600;
       }
     }
+
     .comments {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        image{
-            width: 50rpx;
-            height: 50rpx;
-        }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      image {
+        width: 50rpx;
+        height: 50rpx;
+      }
+
       .commentsNum {
-          font-size: 26rpx;
-          color: rgb(84, 84, 84);
+        font-size: 26rpx;
+        color: rgb(84, 84, 84);
+        font-weight: 600;
       }
     }
+	.favBtn{
+		      width: 200rpx;
+      height: 70rpx;
+	}
   }
+}
+//评论弹窗
+.popup-content {
+  height: 95vh;
+  background: #ffffff;
+  border-radius: 35rpx 35rpx 0 0;
 }
 </style>

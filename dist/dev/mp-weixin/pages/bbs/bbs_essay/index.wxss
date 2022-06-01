@@ -25,10 +25,13 @@
 /* 透明度 */
 /* 文章场景相关 */
 .essay-view.data-v-c6dcbc22 {
-  padding: 0 30rpx;
+  background-color: #fbfbfb;
+  height: 92vh;
 }
 .essay-view .essay-header.data-v-c6dcbc22 {
-  margin-top: 10rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
 }
 .essay-view .essay-header .essayTitle.data-v-c6dcbc22 {
   font-size: 38rpx;
@@ -55,8 +58,18 @@
 }
 .essay-view .essay-container.data-v-c6dcbc22 {
   margin-top: 20rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.essay-view .essay-container .essay-content.data-v-c6dcbc22 {
   text-indent: 60rpx;
   line-height: 50rpx;
+}
+.essay-view .essay-container .essay-img.data-v-c6dcbc22 {
+  margin-top: 0rpx;
 }
 .essay-view .essay-footer.data-v-c6dcbc22 {
   width: 100vw;
@@ -86,7 +99,6 @@
 .essay-view .essay-footer .likeBtn .likeNum.data-v-c6dcbc22 {
   font-size: 26rpx;
   font-weight: 600;
-  color: white;
 }
 .essay-view .essay-footer .comments.data-v-c6dcbc22 {
   display: flex;
@@ -101,4 +113,14 @@
 .essay-view .essay-footer .comments .commentsNum.data-v-c6dcbc22 {
   font-size: 26rpx;
   color: rgb(84, 84, 84);
+  font-weight: 600;
+}
+.essay-view .essay-footer .favBtn.data-v-c6dcbc22 {
+  width: 200rpx;
+  height: 70rpx;
+}
+.popup-content.data-v-c6dcbc22 {
+  height: 95vh;
+  background: #ffffff;
+  border-radius: 35rpx 35rpx 0 0;
 }

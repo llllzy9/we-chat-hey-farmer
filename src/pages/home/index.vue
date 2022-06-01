@@ -46,7 +46,7 @@
         </view>
         <view class="live-video">
           <navigator url="/pages/live/index">
-          <image src="../../static/shouyedongtu.gif" mode="widthFill" ></image>
+          <image src="https://file.uizhw.com/czsj/works/pic/bbfd5289-a399-4eee-9ff2-68058a9dd770.gif" mode="widthFill" ></image>
           </navigator>
         </view>
       </view>
