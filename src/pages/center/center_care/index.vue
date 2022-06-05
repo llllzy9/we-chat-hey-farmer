@@ -4,20 +4,21 @@
             <myheader></myheader>
         </view>
         <view class="fenyemian">
-              <view class="pick">
-            <uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" styleType="text" activeColor="#4cd964"></uni-segmented-control>
-                   </view>
-        <view class="content">
-            <view v-show="current === 0">
-            111111111111
+            <view class="pick">
+                <uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" styleType="text"
+                    activeColor="#4cd964"></uni-segmented-control>
             </view>
-            <view v-show="current === 1">
-            2222222222
+            <view class="content">
+                <view v-show="current === 0">
+                    111111111111
+                </view>
+                <view v-show="current === 1">
+                    2222222222
+                </view>
+                <view v-show="current === 2">
+                    33333333333333
+                </view>
             </view>
-            <view v-show="current === 2">
-            33333333333333
-            </view>
-        </view>
         </view>
     </view>
 </template>
@@ -29,37 +30,38 @@ export default {
 
     data() {
         return {
-        items: ['收藏', '关注', '足迹'],
-        current: 1
+            items: ['钱包', '关注', '足迹'],
+            current: 1
         };
     },
 
     mounted() {
-        
+
     },
 
-     methods: {
-       onClickItem(e) {
-      if (this.current != e.currentIndex) {
-        this.current = e.currentIndex;
-      }
-       },
-       back(){
-           uni.navigateBack();
-       }
-  },
+    methods: {
+        onClickItem(e) {
+            if (this.current != e.currentIndex) {
+                this.current = e.currentIndex;
+            }
+        },
+        back() {
+            uni.navigateBack();
+        }
+    },
 
-    components:{
+    components: {
         myheader,
     },
 };
 </script>
 
 <style lang="scss" scoped>
-.pick{
-    background:#ffffff ;
+.pick {
+    background: #ffffff;
 }
-.fenyemian{
+
+.fenyemian {
     margin-top: 12px;
 }
 </style>

@@ -21,17 +21,27 @@
     <view class="move">
       <!-- 统计 -->
       <view class="count">
-
-        <navigator class="cell" url="/pages/center/center_collection/index"> 0 <text>收藏商品</text> </navigator>
+        <!-- <navigator class="cell" url="/pages/center/center_collection/index">
+          <image src="../../static/money.png" mode="widthFix"></image> <text>钱包</text>
+        </navigator>
         <navigator class="cell" url="/pages/center/center_care/index"> 0 <text>关注商品</text> </navigator>
-        <navigator class="cell" url="/pages/center/center_foot/index"> 99+ <text>我的足迹</text> </navigator>
+        <navigator class="cell" url="/pages/center/center_foot/index"> 99+ <text>我的足迹</text> </navigator> -->
+        <view class="sorts">
+          <navigator class="icon-bill" v-for="item in moneylist" :key="item.id" :url="item.url">
+            <image :src="item.icon" mode="widthFix"></image>
+            <text style="color: #827f8b">{{ item.name }}</text>
+          </navigator>
+        </view>
       </view>
       <!-- 我的订单 -->
       <view class="orders">
         <view class="title">我的订单</view>
         <view class="sorts">
           <navigator class="icon-bill" v-for="item in paylist" :key="item.id" :url="item.url">
-            <image :src="item.icon" mode="widthFix"></image>
+            <uni-badge class="uni-badge-left-margin" :text="item.value" absolute="rightTop" :offset="[-3, -3]"
+              size="small">
+              <image :src="item.icon" mode="widthFix"></image>
+            </uni-badge>
             <text style="color: #827f8b">{{ item.name }}</text>
           </navigator>
 
@@ -63,7 +73,8 @@ export default {
           id: 1,
           icon: '../../static/total.png',
           url: '/pages/center/center_totalorder/index',
-          name: "全部订单"
+          name: "全部订单",
+          value: 6
         },
         {
           id: 2,
@@ -83,11 +94,38 @@ export default {
           url: '/pages/center/center_waitreceive/index',
           name: "待收货"
         }
+      ],
+      moneylist: [
+        {
+          id: 0,
+          icon: '../../static/money.png',
+          url: '/pages/center/center_collection/index',
+          name: "钱包"
+        },
+        {
+          id: 1,
+          icon: '../../static/care.png',
+          url: '/pages/center/center_care/index',
+          name: "关注"
+        },
+        {
+          id: 2,
+          icon: '../../static/foot.png',
+          url: '/pages/center/center_foot/index',
+          name: "足迹"
+        },
       ]
     };
   },
-
-  mounted() { },
+  mounted() {
+    const timer = setInterval(() => {
+      if (this.value >= 199) {
+        clearInterval(timer)
+        return
+      }
+      this.value++
+    }, 100)
+  },
 
   methods: {
     // 授权用户信息
@@ -109,6 +147,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.uni-badge-left-margin {
+  margin-left: 10px;
+}
+
+.uni-badge-absolute {
+  margin-left: 40px;
+}
+
 .wrapper {
   position: absolute;
   top: 0;
@@ -119,7 +165,7 @@ export default {
 }
 
 .profile {
-  height: 375rpx;
+  height: 355rpx;
   background-color: $color;
   display: flex;
   justify-content: center;
@@ -146,29 +192,20 @@ export default {
   }
 }
 
-.count {
-  display: flex;
-  margin: 0 20rpx;
-  height: 100rpx;
-  text-align: center;
-  border-radius: 14rpx;
-  background-color: #fff;
+// .count {
 
-  position: relative;
-  top: -20rpx;
+//   // .cell {
+//   //   flex: 1;
+//   //   padding-top: 16rpx;
+//   //   font-size: 27rpx;
+//   //   color: #333;
+//   // }
 
-  .cell {
-    flex: 1;
-    padding-top: 16rpx;
-    font-size: 27rpx;
-    color: #333;
-  }
-
-  text {
-    display: block;
-    font-size: 24rpx;
-  }
-}
+//   // text {
+//   //   display: block;
+//   //   font-size: 24rpx;
+//   // }
+// }
 
 .orders {
   margin: 0rpx 20rpx 0 20rpx;
@@ -265,5 +302,47 @@ export default {
 
 .move {
   margin-top: 34rpx;
+}
+
+.count {
+  margin: 0rpx 20rpx 0 20rpx;
+  padding: 10rpx 0;
+  background-color: #fff;
+  border-radius: 6rpx;
+
+
+
+  border-bottom: 6rpx solid #eee;
+
+  .sorts {
+    .icon-bill {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    padding-top: 10rpx;
+    text-align: center;
+    display: flex;
+  }
+
+  .icon-bill image {
+    height: 60rpx;
+    width: 60rpx;
+  }
+
+  [class*="icon-"] {
+    flex: 1;
+    font-size: 24rpx;
+
+    &::before {
+      display: block;
+      font-size: 48rpx;
+      margin-bottom: 8rpx;
+      color: #ea4451;
+    }
+  }
 }
 </style>

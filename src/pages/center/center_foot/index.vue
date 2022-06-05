@@ -31,7 +31,7 @@ export default {
 
     data() {
         return {
-            items: ['收藏', '关注', '足迹'],
+            items: ['钱包', '关注', '足迹'],
             current: 2
         };
     },
