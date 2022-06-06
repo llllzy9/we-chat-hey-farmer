@@ -19,7 +19,11 @@ __webpack_require__(/*! common/public.css */ 12);
 
 var _index = _interopRequireDefault(__webpack_require__(/*! ./store/index */ 13));
 
-var _moment = _interopRequireDefault(__webpack_require__(/*! moment */ 18));
+var _moment = _interopRequireDefault(__webpack_require__(/*! moment */ 61));
+
+var _mockjs = _interopRequireDefault(__webpack_require__(/*! mockjs */ 199));
+
+__webpack_require__(/*! @/mock/mockServer */ 200);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

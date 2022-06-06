@@ -11,11 +11,11 @@
           />
         </view>
         <view class="bigipt">
-          <textarea placeholder="对问题补充说明，可以更快获得解答（选填）" />
+          <textarea placeholder="对问题补充说明，可以更快获得解答（选填）" v-model="more" />
         </view>
         <view class="pblBtn">
             <navigator url="/pages/bbs/index"
-            open-type="switchTab"><text>发布问题</text></navigator>
+            open-type="switchTab" @click="publish"><text>发布问题</text></navigator>
         </view>
       </view>
       <view class="footer">
@@ -31,12 +31,31 @@
 </template>
 
 <script>
+import bbs from '../bbs/index.vue'
 export default {
   name: "FarmerIndex",
+  components:{
+    bbs
+  },
   data() {
-    return {};
+    return {
+      message:'',
+      more:'',
+    };
   },
   methods: {
+    publish(){
+      let messageData = {
+          title: this.message,
+          username: "牛吨",
+          imgurl:
+            "https://images.pexels.com/photos/7944397/pexels-photo-7944397.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          content:this.more,
+          comment_num: 0,
+          love_num: 0,
+      }
+      this.recommendlist.unshift(messageData);
+    }
   },
 };
 </script>

@@ -2,7 +2,7 @@
   <view class="car-count">
     <!-- 有商品的购物车 -->
     <scroll-view class="cart-box" v-if="cartsList.length > 0" scroll-y="true">
-      <view class="cart-item" v-for="(item, index) in cartsList" :key="item.id">
+      <view class="cart-item" v-for="(item, index) in cartsList" :key="item.id" >
         <uni-swipe-action>
           <uni-swipe-action-item
             :right-options="options"
@@ -17,9 +17,9 @@
                 ></checkbox-group>
               </view>
               <view class="goods-detail">
-                <view class="goodsImg">
+                <navigator class="goodsImg" url="/pages/goodsdetail/index">
                   <image :src="item.img" mode="aspectFill"></image>
-                </view>
+                </navigator>
                 <view class="goodsInfo">
                   <text class="goodsName">{{ item.name }}</text>
                   <view class="goodsParam">{{ item.param }}</view>
@@ -30,11 +30,11 @@
               </view>
               <view class="countBox">
                 <view class="numSub" @click="changeNum(false, index)">
-                  <text style="font-weight: bold;font-size:32rpx">-</text>
+                  <text style="font-weight: bold; font-size: 32rpx">-</text>
                 </view>
                 <view class="num">{{ item.num }}</view>
                 <view class="numAdd" @click="changeNum(true, index)">
-                  <text style="font-weight: bold;font-size:32rpx">+</text>
+                  <text style="font-weight: bold; font-size: 32rpx">+</text>
                 </view>
               </view>
             </view>
@@ -152,9 +152,7 @@ export default {
     this.getTotalPrice();
 
   },
-  computed:{
-    
-  },
+  computed: {},
 
   methods: {
     //获取总价

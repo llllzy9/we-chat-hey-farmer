@@ -89,9 +89,9 @@ export default {
           id: 0,
           avatar:
             "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=600",
-          username: "杨丹婷小狗",
+          username: "小狗",
           content:
-            "我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视",
+            "我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，",
           time: "2020-02-20 8:11",
           likeNum: "10",
           isLike: false,
@@ -100,9 +100,9 @@ export default {
           id: 1,
           avatar:
             "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=600",
-          username: "杨丹婷小狗",
+          username: "小狗",
           content:
-            "我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视",
+            "我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，",
           time: "2020-02-20 8:11",
           likeNum: "1",
           isLike: false,
@@ -111,9 +111,9 @@ export default {
           id: 2,
           avatar:
             "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=600",
-          username: "杨丹婷小狗",
+          username: "小狗",
           content:
-            "我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视",
+            "我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，",
           time: "2020-02-20 8:11",
           likeNum: "22",
           isLike: false,
@@ -122,9 +122,9 @@ export default {
           id: 3,
           avatar:
             "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=600",
-          username: "杨丹婷小狗",
+          username: "小狗",
           content:
-            "我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视",
+            "我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，",
           time: "2020-02-20 8:11",
           likeNum: "2",
           isLike: false,
@@ -135,7 +135,7 @@ export default {
             "https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=600",
           username: "杨丹婷小狗",
           content:
-            "我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视我是小狗，我爱上吃鄙视",
+            "我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，我是小狗，",
           time: "2020-02-20 8:11",
           likeNum: "9",
           isLike: false,
@@ -178,8 +178,8 @@ export default {
       let userData = {
         avatar:
           "https://images.pexels.com/photos/1119770/pexels-photo-1119770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        username: "沙比",
-        content: "我是啥比",
+        username: "lzy",
+        content: this.myWord,
         time: this.time,
         likeNum: "0",
         isLike: false,

@@ -18,7 +18,7 @@
         circular
         class="swiper"
       >
-        <swiper-item v-for="image in imageList" :key="image.id">
+        <swiper-item v-for="image in bannerList" :key="image.id">
           <image :src="image.imageurl" mode="aspectFill"></image>
         </swiper-item>
       </swiper>
@@ -71,9 +71,6 @@
       </view>
       <view class="loading-text">{{ loadingText }}</view>
     </view>
-			<uni-card title="基础卡片" :isFull="true" sub-title="副标题" extra="额外信息" :thumbnail="avatar">
-				<text class="uni-body">这是一个通栏卡片 ，通栏没有外边距，左右会贴合父元素。</text>
-			</uni-card>
   </view>
 </template>
 
@@ -115,7 +112,7 @@ export default {
   data() {
     return {
       indicatorColor: "#66CC99",
-      imageList: [
+      bannerList: [
         {
           id: 1,
           imageurl:
@@ -244,7 +241,24 @@ export default {
     };
   },
 
-  mounted() {},
+  mounted() {
+    //派发action：通过Vuex发起ajax请求，将数据仓储在仓库中
+    this.$store.dispatch('getBannerList');
+    this.$store.dispatch('dayin');
+    uni.request({
+    url: 'http://106.14.20.78:8080/farm/land/landAllSelect.do', //仅为示例，并非真实接口地址。
+    data: {
+        text: 'uni.request'
+    },
+    header: {
+        'custom-header': 'hello' //自定义请求头信息
+    },
+    success: (res) => {
+        console.log(res.data);
+        this.text = 'request success';
+    }
+});
+  },
 
   methods: {},
 };

@@ -23,6 +23,7 @@
         <swiper style="height: 100vh" :current="curr" @change="setCurr">
           <swiper-item>
             <scroll-view scroll-y class="sgscroll">
+              <!-- 单个帖子 -->
               <view class="sglist">
                 <navigator
                   @click="goDetail(item._id)"
@@ -157,8 +158,6 @@ export default {
       curr: 0,
       pageLoad: false,
       isFirst: true,
-      start: 0,
-      limit: 4,
       recommendlist: [
         {
           id: 0,
