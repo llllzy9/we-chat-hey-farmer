@@ -1,203 +1,150 @@
 <template>
-	<view class="conten">
-		<view class="hand">
-			<view class="list">
-				<span>姓名：</span>
-				<input type="text" placeholder-class="phcolor" placeholder='请输入姓名' v-model="cityForm.name"></input>
-			</view>
-			<view class="list">
-				<span>电话：</span>
-				<input type="text" placeholder-class="phcolor" placeholder='请输入联系电话' v-model="cityForm.phone"></input>
-			</view>
-			<view class="list">
-				<view class="address">地址:</view>
-				<pickerAddress @change="cityChange"><i>{{ cityTitle }}</i></pickerAddress>
-			</view>
-			<view class="list">
-				<span>详细地址：</span>
-				<textarea placeholder-class="phcolor" placeholder="请输入详细地址,例如:XX街道XX栋XX号楼XX层"
-					v-model="cityForm.address" />
-			</view>
-		</view>
-		<view class="btn" @click="saveClick">
-			<p>提交</p>
-		</view>
+	<view class="container">
+		<swiper style="height: 100vh">
+			<swiper-item>
+				<view scroll-y class="sgscroll">
+					<view class="sglist">
+						<view class="sglist-item" v-for="(item, index) in recommendlist" :key="index">
+							<view class="sglist-view">
+								<view class="sglist-title">
+									{{ item.choice }}
+								</view>
+
+								<view class="sglist-desc">
+									<view class="sglist-content">
+										<text>{{ item.content }}</text>
+									</view>
+									<navigator class="sglist-imglist" url="/pages/center/center_link/index">
+										<image class="sglist-imglist-img" mode="aspectFill" :src="item.imgurl"></image>
+									</navigator>
+
+								</view>
+								<view class="sglist-flow">
+									<text>{{ item.name }}</text>
+									<text>{{ item.number }}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</swiper-item>
+
+		</swiper>
+
 	</view>
 </template>
  
 <script>
-import pickerAddress from '../../../component/city/city.vue'
 export default {
 	data() {
 		return {
-			cityTitle: '请选择：省、市、区',
-			cityForm: {
-				name: '', //名字
-				phone: '', //电话
-				province: '', //地址
-				city: '', //城市
-			},
+			url: "../../center/center_link",
+			recommendlist: [
+				{
+					id: 0,
+					choice: "湖北省-天门市-天门",
+					imgurl:
+						"../../../static/change.png",
+					content:
+						"天门外国语学校高中部",
+					name: "安光耀",
+					number: 15527561217,
+				},
+				{
+					id: 1,
+					choice: "湖北省-武汉市-洪山区",
+					imgurl:
+						"../../../static/change.png",
+					content:
+						"资本新时代：日本家庭草莓农场种植技术！从草莓田培育、定值、施肥、蔬果、采收到品控都是严格把控。",
+					name: "李章源",
+					number: 110119121120,
+				},
+
+			],
 		}
 	},
 	methods: {
-		cityChange(data) { //城市选择
-			this.cityTitle = data.data.join('-')
-			this.cityForm.province = this.cityTitle.split('-')[0] //省
-			this.cityForm.city = this.cityTitle.split('-')[1] //市
-			this.cityForm.district = this.cityTitle.split('-')[2] //区
-			this.cityForm.city = this.cityTitle //把获取到的值赋值给  this.cityForm.city
+		onClick(e) {
+			console.log(e)
 		},
-		saveClick() { //点击提交
-			if (!this.cityForm.name) {
-				uni.showToast({
-					title: '请输入姓名',
-					icon: 'none'
-				})
-			} else if (!this.cityForm.phone) {
-				uni.showToast({
-					title: '请输入电话',
-					icon: 'none'
-				})
-			} else if (!this.cityForm.province) {
-				uni.showToast({
-					title: '请选择省',
-					icon: 'none'
-				})
-			} else if (!this.cityForm.city) {
-				uni.showToast({
-					title: '请选择市',
-					icon: 'none'
-				})
-			} else if (!this.cityForm.district) {
-				uni.showToast({
-					title: '请选择区',
-					icon: 'none'
-				})
-			} else if (!this.cityForm.address) {
-				uni.showToast({
-					title: '请输入详细地址',
-					icon: 'none'
-				})
-			} else {
-				//输入完后的一些具体操作
-				uni.showToast({
-					title: '提交成功'
-				})
-				this.cityTitle = '请选择：省、市、区'
-				this.cityForm = ''
-			}
+		actionsClick(text) {
+			uni.showToast({
+				title: text,
+				icon: 'none'
+			})
 		}
-	},
-	components: {
-		pickerAddress
-	},
+	}
 }
 </script>
- 
-<style>
-.hand {
-	/* box-shadow: 0 0 10px rgb(0 0 0 / 30%); */
-	background-color: #fff;
-	width: 95%;
-	margin: 0 auto;
-	margin-bottom: 30rpx;
-	padding: 0 10rpx;
-	box-sizing: border-box;
-	border-radius: 20rpx;
+			
+<style lang="scss">
+.sgscroll {
+	height: 100vh;
 }
 
-
-
-.hand .list {
+.sglist {
 	display: flex;
-	align-items: center;
-	width: 100%;
-	padding: 30rpx 0;
-	border-bottom: 1px solid rgb(39, 35, 35);
+	flex-direction: column;
 }
 
-.address {
-	color: rgb(39, 35, 35);
-	font-weight: bold;
-	font-style: normal;
-	padding-right: 100rpx;
-}
+.sglist-item {
+	margin-bottom: 15rpx;
+	background: #fff;
+	box-shadow: 0rpx 5rpx 10rpx #d7d7d7;
 
-.hand .list:last-child {
-	display: block;
-	border-bottom: none;
-}
+	.sglist-view {
+		width: 95vw;
+		margin: 0 auto;
+		padding: 20rpx 10rpx;
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+	}
 
-.hand .list b {
-	font-size: 30rpx;
-	color: rgb(39, 35, 35);
-	font-weight: bold;
-	padding-left: 5rpx;
-}
+	.sglist-title {
+		width: 600rpx;
+		font-size: 36rpx;
+		font-weight: 700;
+		margin-top: 4px;
+	}
 
+	.sglist-desc {
+		font-size: 28rpx;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
 
-.hand .list i {
-	flex: 1;
-	font-size: 30rpx;
-	color: rgb(39, 35, 35);
-	font-weight: bold;
-	font-style: normal;
-}
+		.sglist-content {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			padding-right: 10rpx;
+			margin-top: 4px;
+		}
 
-.hand .list textarea {
-	width: 100%;
-	margin-top: 20rpx;
-	border: none;
-	color: rgb(39, 35, 35);
-	background-color: #FAFAFA;
-	height: 200rpx;
-	border-radius: 40rpx;
-	padding: 30rpx;
-	box-sizing: border-box;
-	font-weight: bold;
-}
+		.sglist-imglist {
+			image {
+				width: 50rpx;
+				height: 40rpx;
+				border-radius: 10rpx;
+			}
+		}
+	}
 
-.hand .list /deep/uni-picker {
-	width: 100%;
-	flex: 3;
-}
+	.sglist-flow {
+		color: rgb(157, 157, 157);
+		font-size: 26rpx;
+		font-weight: 500;
+		margin-top: 4px;
 
-.hand .list span {
-	flex: 1;
-	font-size: 30rpx;
-	color: rgb(39, 35, 35);
-	font-weight: bold;
+		text {
+			margin-right: 20rpx;
+		}
+	}
 }
+</style>>
 
-.hand .list input {
-	flex: 3;
-	font-size: 38rpx;
-	color: rgba(94, 90, 90, 0.2);
-	font-weight: bold;
-	box-sizing: border-box;
-}
-
-.btn {
-	width: 80%;
-	height: 50px;
-	border-radius: 10px;
-	border: 4rpx solid #fff;
-	overflow: hidden;
-	margin: 0 auto;
-}
-
-.btn p {
-	font-size: 35rpx;
-	padding: 20rpx 0;
-	text-align: center;
-	color: rgb(39, 35, 35);
-	display: block;
-	background-color: #2ccf8c;
-	border-radius: 20rpx;
-}
-
-.phcolor {
-	color: rgb(97, 74, 74);
-	font-size: 26rpx;
-}
-</style>
