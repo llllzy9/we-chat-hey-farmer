@@ -1,6 +1,7 @@
 <template>
 	<view class="container">
-		<swiper style="height: 100vh">
+		<u-empty class="noData" :show="recommendlist.length == 0" text="收货地址为空"></u-empty>
+		<view style="height: 100vh">
 			<swiper-item>
 				<view scroll-y class="sgscroll">
 					<view class="sglist">
@@ -9,13 +10,13 @@
 								<view class="sglist-title">
 									{{ item.choice }}
 								</view>
-
 								<view class="sglist-desc">
 									<view class="sglist-content">
 										<text>{{ item.content }}</text>
 									</view>
-									<navigator class="sglist-imglist" url="/pages/center/center_link/index">
-										<image class="sglist-imglist-img" mode="aspectFill" :src="item.imgurl"></image>
+									<navigator class="sglist-imglist" @click="remove($index)">
+										<image class="sglist-imglist-img" mode="aspectFill"
+											src="../../../static/del.png"></image>
 									</navigator>
 
 								</view>
@@ -28,9 +29,10 @@
 					</view>
 				</view>
 			</swiper-item>
-
-		</swiper>
-
+			<navigator url="/pages/center/center_link/index">
+				<button type="submit" style="z-index:99;" class="btn btn-block">新增地址</button>
+			</navigator>
+		</view>
 	</view>
 </template>
  
@@ -43,8 +45,6 @@ export default {
 				{
 					id: 0,
 					choice: "湖北省-天门市-天门",
-					imgurl:
-						"../../../static/change.png",
 					content:
 						"天门外国语学校高中部",
 					name: "安光耀",
@@ -53,32 +53,40 @@ export default {
 				{
 					id: 1,
 					choice: "湖北省-武汉市-洪山区",
-					imgurl:
-						"../../../static/change.png",
 					content:
-						"资本新时代：日本家庭草莓农场种植技术！从草莓田培育、定值、施肥、蔬果、采收到品控都是严格把控。",
+						"武昌首义学院高架桥旁11栋教学楼菜鸟驿站",
 					name: "李章源",
 					number: 110119121120,
 				},
-
 			],
 		}
 	},
 	methods: {
-		onClick(e) {
-			console.log(e)
-		},
-		actionsClick(text) {
-			uni.showToast({
-				title: text,
-				icon: 'none'
-			})
+		remove(index) {
+			this.recommendlist.splice(index, 1)
 		}
-	}
+
+	},
+
 }
 </script>
 			
 <style lang="scss">
+.btn-block {
+	width: 80%;
+	height: 50px;
+	border-radius: 15px;
+	border: 4rpx solid #fff;
+	overflow: hidden;
+	background-color: #2ccf8c;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, 400%);
+	color: #fff;
+	text-align: center;
+}
+
 .sgscroll {
 	height: 100vh;
 }
@@ -104,13 +112,13 @@ export default {
 
 	.sglist-title {
 		width: 600rpx;
-		font-size: 36rpx;
-		font-weight: 700;
+		font-size: 30rpx;
 		margin-top: 4px;
 	}
 
 	.sglist-desc {
-		font-size: 28rpx;
+		font-size: 35rpx;
+		font-weight: 700;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -123,28 +131,30 @@ export default {
 			-webkit-box-orient: vertical;
 			-webkit-line-clamp: 2;
 			padding-right: 10rpx;
-			margin-top: 4px;
+			margin-top: 6px;
 		}
 
 		.sglist-imglist {
 			image {
-				width: 50rpx;
-				height: 40rpx;
+				width: 45rpx;
+				height: 50rpx;
 				border-radius: 10rpx;
 			}
 		}
 	}
 
 	.sglist-flow {
-		color: rgb(157, 157, 157);
-		font-size: 26rpx;
+
+		font-size: 28rpx;
 		font-weight: 500;
-		margin-top: 4px;
+		margin-top: 6px;
 
 		text {
 			margin-right: 20rpx;
 		}
 	}
+
+
 }
 </style>>
 

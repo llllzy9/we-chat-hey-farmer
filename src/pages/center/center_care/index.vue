@@ -1,7 +1,7 @@
 <template>
     <view>
         <view class="search">
-            <myheader></myheader>
+
         </view>
         <view class="fenyemian">
             <view class="pick">

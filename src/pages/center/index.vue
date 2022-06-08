@@ -42,7 +42,7 @@
               size="small">
               <image :src="item.icon" mode="widthFix"></image>
             </uni-badge>
-            <text style="color: #827f8b">{{ item.name }}</text>
+            <text style="color: #827f8b" class="titlename">{{ item.name }}</text>
           </navigator>
 
         </view>
@@ -52,7 +52,7 @@
       <!-- 其它 -->
       <view class="extra">
         <navigator class="item icon-arrow" url="/pages/center/center_link/index">联系客服</navigator>
-        <button open-type="feedback" class="item icon-arrow">意见反馈</button>
+        <button open-type="feedback" class="item icon-arrow">{{ this.$store.state.recommendlist }}}</button>
       </view>
     </view>
   </view>
@@ -147,6 +147,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.titlename {
+  text-align: center;
+  padding-left: 20rpx;
+}
+
 .uni-badge-left-margin {
   margin-left: 10px;
 }
@@ -228,6 +233,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
       justify-content: center;
     }
 
@@ -332,6 +338,7 @@ export default {
     height: 60rpx;
     width: 60rpx;
   }
+
 
   [class*="icon-"] {
     flex: 1;
