@@ -104,7 +104,7 @@ var components
 try {
   components = {
     uniSegmentedControl: function () {
-      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control */ "node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue */ 390))
+      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control */ "node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue */ 383))
     },
   }
 } catch (e) {
@@ -170,7 +170,7 @@ exports.default = void 0;
 
 var myheader = function myheader() {
   __webpack_require__.e(/*! require.ensure | component/header/index */ "component/header/index").then((function () {
-    return resolve(__webpack_require__(/*! ../../../component/header/index.vue */ 359));
+    return resolve(__webpack_require__(/*! ../../../component/header/index.vue */ 352));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 

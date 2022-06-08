@@ -31,12 +31,8 @@
 </template>
 
 <script>
-import bbs from '../bbs/index.vue'
 export default {
   name: "FarmerIndex",
-  components:{
-    bbs
-  },
   data() {
     return {
       message:'',
@@ -53,8 +49,9 @@ export default {
           content:this.more,
           comment_num: 0,
           love_num: 0,
-      }
-      this.recommendlist.unshift(messageData);
+      };
+      this.$store.dispatch('addEssay',messageData);
+      console.log(123);
     }
   },
 };

@@ -104,7 +104,7 @@ var components
 try {
   components = {
     uniGoodsNav: function () {
-      return Promise.all(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav.vue */ 397))
+      return Promise.all(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav.vue */ 390))
     },
   }
 } catch (e) {

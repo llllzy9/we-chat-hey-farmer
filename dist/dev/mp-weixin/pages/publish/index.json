@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "发布",
-  "usingComponents": {
-    "bbs": "/pages/bbs/index"
-  }
+  "usingComponents": {}
 }

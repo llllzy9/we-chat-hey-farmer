@@ -4,9 +4,21 @@
         "ignore": [],
         "include": []
     },
-    "condition": {},
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/shopcar/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    },
     "setting": {
-        "urlCheck": true,
+        "urlCheck": false,
         "coverView": true,
         "es6": false,
         "postcss": true,

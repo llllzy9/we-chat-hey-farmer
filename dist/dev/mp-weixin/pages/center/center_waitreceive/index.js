@@ -147,13 +147,13 @@ exports.default = void 0;
 
 var goodsOrder = function goodsOrder() {
   __webpack_require__.e(/*! require.ensure | component/goods-order/index */ "component/goods-order/index").then((function () {
-    return resolve(__webpack_require__(/*! ../../../component/goods-order */ 413));
+    return resolve(__webpack_require__(/*! ../../../component/goods-order */ 406));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
 var myheader = function myheader() {
   __webpack_require__.e(/*! require.ensure | component/header/index */ "component/header/index").then((function () {
-    return resolve(__webpack_require__(/*! ../../../component/header/index.vue */ 359));
+    return resolve(__webpack_require__(/*! ../../../component/header/index.vue */ 352));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
