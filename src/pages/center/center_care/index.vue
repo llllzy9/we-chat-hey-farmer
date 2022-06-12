@@ -1,8 +1,5 @@
 <template>
     <view>
-        <view class="search">
-
-        </view>
         <view class="fenyemian">
             <view class="pick">
                 <uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" styleType="text"
@@ -16,7 +13,7 @@
                     2222222222
                 </view>
                 <view v-show="current === 2">
-                    33333333333333
+                    <foot></foot>
                 </view>
             </view>
         </view>
@@ -25,6 +22,7 @@
 
 <script>
 import myheader from "../../../component/header/index.vue";
+import foot from '../../../component/foot/index.vue'
 export default {
     name: 'refund',
 
@@ -52,6 +50,7 @@ export default {
 
     components: {
         myheader,
+        foot
     },
 };
 </script>

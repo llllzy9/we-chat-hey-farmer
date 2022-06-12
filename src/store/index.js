@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import Vuex from 'Vuex'
-Vue.use(Vuex)
+import Vue from 'vue';
+import Vuex from 'vuex';
+//需要使用插件一次
+Vue.use(Vuex);
+import center from './center'
 
-const store = new Vuex.Store({//创建store仓库
-    state: {//共享的数据
-        recommendlist: 123
+export default new Vuex.Store({
+    modules: {
+        center
     }
 })
-
-export default store;

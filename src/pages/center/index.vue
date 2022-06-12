@@ -10,8 +10,8 @@
 
         <view class="content">
           <!-- 点击登录按钮 -->
-          <button v-if="canIUseGetUserProfile" class="bottoms" type="primary" open-type="getPhoneNumber"
-            withCredentials="true" lang="zh_CN" @click="wxGetUserInfo">
+          <button v-if="canIUseGetUserProfile" class="bottoms" type="primary" withCredentials="true" lang="zh_CN"
+            @click="wxGetUserInfo">
             点击登录</button>
         </view>
 
@@ -51,8 +51,10 @@
       <navigator class="address icon-arrow" url="/pages/center/center_address/index"> 收货地址 </navigator>
       <!-- 其它 -->
       <view class="extra">
-        <navigator class="item icon-arrow" url="/pages/center/center_link/index">联系客服</navigator>
-        <button open-type="feedback" class="item icon-arrow">{{ this.$store.state.recommendlist }}}</button>
+
+        <button open-type="contact" show-message-card session-from send-message-path send-message-title
+          class="item icon-arrow">在线客服</button>
+        <button open-type="feedback" class="item icon-arrow"> 意见反馈 </button>
       </view>
     </view>
   </view>

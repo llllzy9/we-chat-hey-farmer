@@ -1,11 +1,11 @@
 <template>
 	<view class="container">
-		<u-empty class="noData" :show="recommendlist.length == 0" text="收货地址为空"></u-empty>
+		<u-empty class="noData" :show="recommendlist1.length == 0" text="收货地址为空"></u-empty>
 		<view style="height: 100vh">
 			<swiper-item>
 				<view scroll-y class="sgscroll">
 					<view class="sglist">
-						<view class="sglist-item" v-for="(item, index) in recommendlist" :key="index">
+						<view class="sglist-item" v-for="(item, index) in recommendlist1" :key="index">
 							<view class="sglist-view">
 								<view class="sglist-title">
 									{{ item.choice }}
@@ -37,38 +37,26 @@
 </template>
  
 <script>
+import { mapState } from 'vuex';
 export default {
 	data() {
 		return {
 			url: "../../center/center_link",
-			recommendlist: [
-				{
-					id: 0,
-					choice: "湖北省-天门市-天门",
-					content:
-						"天门外国语学校高中部",
-					name: "安光耀",
-					number: 15527561217,
-				},
-				{
-					id: 1,
-					choice: "湖北省-武汉市-洪山区",
-					content:
-						"武昌首义学院高架桥旁11栋教学楼菜鸟驿站",
-					name: "李章源",
-					number: 110119121120,
-				},
-			],
 		}
 	},
 	methods: {
 		remove(index) {
-			this.recommendlist.splice(index, 1)
+			this.recommendlist1.splice(index, 1)
 		}
-
 	},
+	computed: {
+		...mapState({
+			recommendlist1: (state) => state.center.recommendlist1,
+		})
+	}
+};
 
-}
+
 </script>
 			
 <style lang="scss">
