@@ -7,10 +7,10 @@
             </view>
             <view class="content">
                 <view v-show="current === 0">
-                    111111111111
+                    <money></money>
                 </view>
                 <view v-show="current === 1">
-                    2222222222
+                    <care></care>
                 </view>
                 <view v-show="current === 2">
                     <foot></foot>
@@ -23,6 +23,8 @@
 <script>
 import myheader from "../../../component/header/index.vue";
 import foot from '../../../component/foot/index.vue'
+import care from '../../../component/care/index.vue'
+import money from '../../../component/money/index.vue'
 export default {
     name: 'refund',
 
@@ -50,7 +52,9 @@ export default {
 
     components: {
         myheader,
-        foot
+        foot,
+        care,
+        money
     },
 };
 </script>

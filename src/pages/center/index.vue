@@ -29,7 +29,7 @@
         <view class="sorts">
           <navigator class="icon-bill" v-for="item in moneylist" :key="item.id" :url="item.url">
             <image :src="item.icon" mode="widthFix"></image>
-            <text style="color: #827f8b">{{ item.name }}</text>
+            <text>{{ item.name }}</text>
           </navigator>
         </view>
       </view>
@@ -42,7 +42,7 @@
               size="small">
               <image :src="item.icon" mode="widthFix"></image>
             </uni-badge>
-            <text style="color: #827f8b" class="titlename">{{ item.name }}</text>
+            <text class="titlename">{{ item.name }}</text>
           </navigator>
 
         </view>
@@ -53,7 +53,7 @@
       <view class="extra">
 
         <button open-type="contact" show-message-card session-from send-message-path send-message-title
-          class="item icon-arrow">在线客服</button>
+          class="item icon-arrow"> 在线客服</button>
         <button open-type="feedback" class="item icon-arrow"> 意见反馈 </button>
       </view>
     </view>
