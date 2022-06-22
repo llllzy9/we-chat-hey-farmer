@@ -24,21 +24,60 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.video-show .video.data-v-b0f430b0 {
-  width: 10%;
-}
-.video-show .video input.data-v-b0f430b0 {
-  position: absolute;
-  bottom: 80rpx;
-  left: 30rpx;
-  background: rgba(170, 170, 170, 0.44);
-  width: 300rpx;
-  height: 80rpx;
-  border-radius: 40rpx;
-  z-index: 999;
-  padding: 10rpx;
+.video-show.data-v-b0f430b0 {
+  background: #ffffff;
+  height: 100vh;
 }
 .video-show .video video.data-v-b0f430b0 {
-  height: 100vh;
   width: 100vw;
+}
+.video-show .comments.data-v-b0f430b0 {
+  padding: 0 20rpx;
+  overflow: hidden;
+  height: 655rpx;
+}
+.video-show .comments .output.data-v-b0f430b0 {
+  display: flex;
+  flex-direction: column;
+}
+.video-show .comments .output .word.data-v-b0f430b0 {
+  font-size: 26rpx;
+  font-weight: 600;
+  line-height: 50rpx;
+}
+.video-show .comments .output .word text.data-v-b0f430b0:nth-child(1) {
+  color: rgb(112, 112, 112);
+  margin-right: 10rpx;
+}
+.video-show .input.data-v-b0f430b0 {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 2rpx 2rpx 10rpx #aaa;
+}
+.video-show .input .user-avatar.data-v-b0f430b0 {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 60rpx;
+  margin-right: 10rpx;
+}
+.video-show .input input.data-v-b0f430b0 {
+  background: rgba(214, 213, 213, 0.447);
+  width: 450rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  padding: 10rpx 20rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+}
+.video-show .allcard.data-v-b0f430b0 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.video-show .allcard .card.data-v-b0f430b0 {
+  width: 370rpx;
 }

@@ -104,7 +104,7 @@ var components
 try {
   components = {
     uniGoodsNav: function () {
-      return Promise.all(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav.vue */ 390))
+      return Promise.all(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-goods-nav/uni-goods-nav.vue */ 397))
     },
   }
 } catch (e) {
@@ -218,12 +218,19 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   name: "FarmerIndex",
   data: function data() {
     return {
       goodsDetail: {
-        imageUrl: "https://images.pexels.com/photos/4207901/pexels-photo-4207901.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        imageUrl: ["https://images.pexels.com/photos/4207901/pexels-photo-4207901.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "https://images.pexels.com/photos/4207901/pexels-photo-4207901.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"],
         price: "123.00",
         label: "自营",
         title: "撒哈拉大沙漠鎏金精华绿洲生命之源",

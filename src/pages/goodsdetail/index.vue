@@ -2,8 +2,15 @@
   <div>
     <view class="goods-detail">
       <view class="detail-view">
-        <view class="goods-img">
-          <image :src="goodsDetail.imageUrl" mode="aspectFill"></image>
+        <view class="goods-img" style="height:50vh">
+          <swiper class="swiper" circular style="height:100%">
+            <swiper-item
+              v-for="(item, index) in goodsDetail.imageUrl"
+              :key="index"
+            >
+              <image :src="item" mode="aspectFill"></image>
+            </swiper-item>
+          </swiper>
         </view>
         <view class="goods">
           <view class="goods-price">
@@ -56,8 +63,10 @@ export default {
   data() {
     return {
       goodsDetail: {
-        imageUrl:
+        imageUrl: [
           "https://images.pexels.com/photos/4207901/pexels-photo-4207901.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "https://images.pexels.com/photos/4207901/pexels-photo-4207901.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        ],
         price: "123.00",
         label: "自营",
         title: "撒哈拉大沙漠鎏金精华绿洲生命之源",
@@ -150,10 +159,10 @@ export default {
         console.log("跳转客服");
       }
     },
-    goto(){
+    goto() {
       uni.navigateTo({
-        url:"/pages/shoplist/index"
-      })
+        url: "/pages/shoplist/index",
+      });
     },
     buttonClick(e) {
       console.log(e);
@@ -238,7 +247,7 @@ export default {
         border-radius: 20rpx;
         .card {
           display: flex;
-        flex-direction: column;
+          flex-direction: column;
           .goods-price {
             bottom: 40rpx;
             width: 100%;
@@ -271,7 +280,7 @@ export default {
   bottom: 0;
   box-shadow: -5rpx -3rpx 10rpx rgba(217, 217, 217, 0.933);
 }
-.more-goods::after{
+.more-goods::after {
   content: "";
   margin-top: 30rpx;
   width: 100vw;

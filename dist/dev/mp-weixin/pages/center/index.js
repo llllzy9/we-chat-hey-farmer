@@ -101,6 +101,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uniBadge: function () {
+      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge */ "node-modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-badge/uni-badge.vue */ 383))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -195,50 +218,115 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
-  name: 'FarmerIndex',
+  name: "FarmerIndex",
   data: function data() {
     return {
       canIUseGetUserProfile: true,
-      url: '',
-      nickname: '',
+      url: "",
+      nickname: "",
       paylist: [{
         id: 1,
-        icon: '../../static/total.png',
-        url: '/pages/center/center_totalorder/index',
-        name: "全部订单"
+        icon: "../../static/total.png",
+        url: "/pages/center/center_totalorder/index",
+        name: "全部订单",
+        value: 6
       }, {
         id: 2,
-        icon: '../../static/waitpay.png',
-        url: '/pages/center/center_waitpay/index',
+        icon: "../../static/waitpay.png",
+        url: "/pages/center/center_waitpay/index",
         name: "待付款"
       }, {
         id: 4,
-        icon: '../../static/waitsent.png',
-        url: '/pages/center/center_refund/index',
+        icon: "../../static/waitsent.png",
+        url: "/pages/center/center_refund/index",
         name: "待发货"
       }, {
         id: 3,
-        icon: '../../static/waitreceive.png',
-        url: '/pages/center/center_waitreceive/index',
+        icon: "../../static/waitreceive.png",
+        url: "/pages/center/center_waitreceive/index",
         name: "待收货"
+      }],
+      moneylist: [{
+        id: 0,
+        icon: "../../static/money.png",
+        url: "/pages/center/center_collection/index",
+        name: "钱包"
+      }, {
+        id: 1,
+        icon: "../../static/care.png",
+        url: "/pages/center/center_care/index",
+        name: "关注"
+      }, {
+        id: 2,
+        icon: "../../static/foot.png",
+        url: "/pages/center/center_foot/index",
+        name: "足迹"
       }]
     };
   },
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    var _this = this;
+
+    var timer = setInterval(function () {
+      if (_this.value >= 199) {
+        clearInterval(timer);
+        return;
+      }
+
+      _this.value++;
+    }, 100);
+  },
   methods: {
     // 授权用户信息
     wxGetUserInfo: function wxGetUserInfo() {
-      var _this = this;
+      var _this2 = this;
 
       var that = this;
       wx.getUserProfile({
         desc: "获取你的昵称、头像、地区及性别",
         success: function success(infoRes) {
-          console.log(infoRes, '----信息---');
-          _this.canIUseGetUserProfile = false;
-          _this.url = infoRes.userInfo.avatarUrl;
-          _this.nickname = infoRes.userInfo.nickName;
+          console.log(infoRes, "----信息---");
+          _this2.canIUseGetUserProfile = false;
+          _this2.url = infoRes.userInfo.avatarUrl;
+          _this2.nickname = infoRes.userInfo.nickName;
         }
       });
     }

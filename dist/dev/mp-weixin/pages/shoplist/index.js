@@ -104,7 +104,7 @@ var components
 try {
   components = {
     uniSegmentedControl: function () {
-      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control */ "node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue */ 383))
+      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control */ "node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue */ 390))
     },
   }
 } catch (e) {

@@ -244,20 +244,6 @@ export default {
   mounted() {
     //派发action：通过Vuex发起ajax请求，将数据仓储在仓库中
     this.$store.dispatch('getBannerList');
-    this.$store.dispatch('dayin');
-    uni.request({
-    url: 'http://106.14.20.78:8080/farm/land/landAllSelect.do', //仅为示例，并非真实接口地址。
-    data: {
-        text: 'uni.request'
-    },
-    header: {
-        'custom-header': 'hello' //自定义请求头信息
-    },
-    success: (res) => {
-        console.log(res.data);
-        this.text = 'request success';
-    }
-});
   },
 
   methods: {},

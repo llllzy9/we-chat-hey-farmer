@@ -2,7 +2,7 @@ import { reqGetBannerList } from "../../api";
 //home模块的小仓库
 const state = {
     //轮播图的数组
-    bannerList: []
+    bannerList: [],
 };
 const mutations = {
     GETBANNERLIST(state, bannerList) {
@@ -19,9 +19,6 @@ const actions = {
         }
         console.log('请求失败 ');
     },
-    dayin() {
-        console.log('test');
-    }
 };
 const getters = {};
 export default {

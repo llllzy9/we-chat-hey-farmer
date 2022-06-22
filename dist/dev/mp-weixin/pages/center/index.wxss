@@ -24,6 +24,16 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.titlename.data-v-0f3320de {
+  text-align: center;
+  padding-left: 20rpx;
+}
+.uni-badge-left-margin.data-v-0f3320de {
+  margin-left: 10px;
+}
+.uni-badge-absolute.data-v-0f3320de {
+  margin-left: 40px;
+}
 .wrapper.data-v-0f3320de {
   position: absolute;
   top: 0;
@@ -32,7 +42,7 @@
   background-color: #f4f4f4;
 }
 .profile.data-v-0f3320de {
-  height: 375rpx;
+  height: 355rpx;
   background-color: #00c170;
   display: flex;
   justify-content: center;
@@ -53,26 +63,6 @@
   margin-top: 20rpx;
   font-size: 30rpx;
   color: #fff;
-}
-.count.data-v-0f3320de {
-  display: flex;
-  margin: 0 20rpx;
-  height: 100rpx;
-  text-align: center;
-  border-radius: 14rpx;
-  background-color: #fff;
-  position: relative;
-  top: -20rpx;
-}
-.count .cell.data-v-0f3320de {
-  flex: 1;
-  padding-top: 16rpx;
-  font-size: 27rpx;
-  color: #333;
-}
-.count text.data-v-0f3320de {
-  display: block;
-  font-size: 24rpx;
 }
 .orders.data-v-0f3320de {
   margin: 0rpx 20rpx 0 20rpx;
@@ -97,6 +87,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
 }
 .orders .icon-bill image.data-v-0f3320de {
@@ -154,4 +145,37 @@
 }
 .move.data-v-0f3320de {
   margin-top: 34rpx;
+}
+.count.data-v-0f3320de {
+  margin: 0rpx 20rpx 0 20rpx;
+  padding: 10rpx 0;
+  background-color: #fff;
+  border-radius: 6rpx;
+  border-bottom: 6rpx solid #eee;
+}
+.count .sorts.data-v-0f3320de {
+  padding-top: 10rpx;
+  text-align: center;
+  display: flex;
+}
+.count .sorts .icon-bill.data-v-0f3320de {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.count .icon-bill image.data-v-0f3320de {
+  height: 60rpx;
+  width: 60rpx;
+}
+.count [class*=icon-].data-v-0f3320de {
+  flex: 1;
+  font-size: 24rpx;
+}
+.count [class*=icon-].data-v-0f3320de::before {
+  display: block;
+  font-size: 48rpx;
+  margin-bottom: 8rpx;
+  color: #ea4451;
 }

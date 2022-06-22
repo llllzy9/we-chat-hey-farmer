@@ -80,7 +80,7 @@ var components
 try {
   components = {
     uniTransition: function () {
-      return Promise.all(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-transition/uni-transition.vue */ 444))
+      return Promise.all(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-ui/lib/uni-transition/uni-transition")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-transition/uni-transition.vue */ 466))
     },
   }
 } catch (e) {

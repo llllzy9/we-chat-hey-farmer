@@ -47,7 +47,7 @@
                         <image
                           class="sglist-imglist-img"
                           mode="aspectFill"
-                          :src="item.imgurl"
+                          :src="item.imgurl[0]"
                         ></image>
                       </view>
                     </view>
@@ -242,7 +242,7 @@ export default {
     font-size: 28rpx;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     .sglist-content {
       overflow: hidden;

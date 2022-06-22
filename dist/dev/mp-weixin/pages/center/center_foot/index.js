@@ -104,7 +104,7 @@ var components
 try {
   components = {
     uniSegmentedControl: function () {
-      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control */ "node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue */ 383))
+      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control */ "node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control.vue */ 390))
     },
   }
 } catch (e) {
@@ -176,7 +176,7 @@ var myheader = function myheader() {
 
 var foot = function foot() {
   __webpack_require__.e(/*! require.ensure | component/foot/index */ "component/foot/index").then((function () {
-    return resolve(__webpack_require__(/*! ../../../component/foot/index.vue */ 401));
+    return resolve(__webpack_require__(/*! ../../../component/foot/index.vue */ 430));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
@@ -184,7 +184,7 @@ var _default = {
   name: 'refund',
   data: function data() {
     return {
-      items: ['收藏', '关注', '足迹'],
+      items: ['钱包', '关注', '足迹'],
       current: 2
     };
   },

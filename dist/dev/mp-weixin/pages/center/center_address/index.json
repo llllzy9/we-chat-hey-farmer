@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "我的地址",
-  "usingComponents": {
-    "picker-address": "/component/city/city"
-  }
+  "usingComponents": {}
 }

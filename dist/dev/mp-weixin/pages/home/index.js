@@ -138,7 +138,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
+
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -262,31 +262,12 @@ var _default = {
     };
   },
   mounted: function mounted() {
-    var _this = this;
-
     //派发action：通过Vuex发起ajax请求，将数据仓储在仓库中
     this.$store.dispatch('getBannerList');
-    this.$store.dispatch('dayin');
-    uni.request({
-      url: 'http://106.14.20.78:8080/farm/land/landAllSelect.do',
-      //仅为示例，并非真实接口地址。
-      data: {
-        text: 'uni.request'
-      },
-      header: {
-        'custom-header': 'hello' //自定义请求头信息
-
-      },
-      success: function success(res) {
-        console.log(res.data);
-        _this.text = 'request success';
-      }
-    });
   },
   methods: {}
 };
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

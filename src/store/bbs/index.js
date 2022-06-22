@@ -8,7 +8,7 @@ const state = {
             title: "新手种植该怎样选择土壤？",
             username: "牛吨",
             imgurl:
-                "https://images.pexels.com/photos/7944397/pexels-photo-7944397.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                ["https://images.pexels.com/photos/7944397/pexels-photo-7944397.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"],
             content:
                 "目前可以用来种植的培养土，令郎满目种类繁多，很多人都不清楚要购买什么样的土壤才合适，所以这里就对土壤做个简单的介绍。",
             love_num: 1090,
@@ -19,7 +19,7 @@ const state = {
             title: "如何在家云种草莓？",
             username: "做物业",
             imgurl:
-                "https://images.pexels.com/photos/1788912/pexels-photo-1788912.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                ["https://images.pexels.com/photos/1788912/pexels-photo-1788912.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"],
             content:
                 "资本新时代：日本家庭草莓农场种植技术！从草莓田培育、定值、施肥、蔬果、采收到品控都是严格把控。",
             love_num: 908,
@@ -30,7 +30,7 @@ const state = {
             title: "蔬菜种植时间表",
             username: "牛郎",
             imgurl:
-                "https://images.pexels.com/photos/89267/pexels-photo-89267.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                ["https://images.pexels.com/photos/89267/pexels-photo-89267.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"],
             content:
                 "炎夏：豌豆、油菜、芦笋、芥菜等。蔬菜种植时间的选择，大家都有各自的说法和点子。",
             love_num: 98,
@@ -41,7 +41,7 @@ const state = {
             title: "种植中草药的几条黄金定律",
             username: "螺蛳粉",
             imgurl:
-                "https://images.pexels.com/photos/6034375/pexels-photo-6034375.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                ["https://images.pexels.com/photos/6034375/pexels-photo-6034375.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"],
             content:
                 "土专家：特别是像发展中草药材种植的农民朋友。一、首先要甄选出适合当地种植的中药药材。",
             love_num: 70,
@@ -52,7 +52,7 @@ const state = {
             title: "中国各个省份主要农作物种植地图",
             username: "老友粉",
             imgurl:
-                "https://images.pexels.com/photos/8602985/pexels-photo-8602985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                ["https://images.pexels.com/photos/8602985/pexels-photo-8602985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"],
             content:
                 "勤劳的小蜜蜂：来源|2018年统计年鉴 小麦种植的情况 玉米种植的情况 稻谷种植的情况 数据来源：2018年统计年鉴。",
             love_num: 320,
@@ -63,7 +63,7 @@ const state = {
             title: "最美的风景",
             username: "李谱",
             imgurl:
-                "https://images.pexels.com/photos/11774056/pexels-photo-11774056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+                ["https://images.pexels.com/photos/11774056/pexels-photo-11774056.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"],
             content:
                 "在广西梧州有这么一个地方,那里山清水秀，绿水长安，人们亲切和蔼，热情助人，是一个桃园市外的好地方。",
             love_num: 160,
@@ -149,7 +149,7 @@ const mutations = {
         state.commentsNum++
     },
     ADDESSAY(state, data) {
-        state.recommendlist.push(data)
+        state.recommendlist.unshift(data)
     }
 };
 const actions = {

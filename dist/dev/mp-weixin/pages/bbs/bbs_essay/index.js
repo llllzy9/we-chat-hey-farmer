@@ -104,10 +104,10 @@ var components
 try {
   components = {
     uniBadge: function () {
-      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge */ "node-modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-badge/uni-badge.vue */ 419))
+      return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge */ "node-modules/@dcloudio/uni-ui/lib/uni-badge/uni-badge").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-badge/uni-badge.vue */ 383))
     },
     uniFav: function () {
-      return Promise.all(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-fav/uni-fav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-ui/lib/uni-fav/uni-fav")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-fav/uni-fav.vue */ 426))
+      return Promise.all(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-fav/uni-fav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("node-modules/@dcloudio/uni-ui/lib/uni-fav/uni-fav")]).then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-fav/uni-fav.vue */ 448))
     },
     uniPopup: function () {
       return __webpack_require__.e(/*! import() | node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup */ "node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @dcloudio/uni-ui/lib/uni-popup/uni-popup.vue */ 359))
@@ -178,7 +178,7 @@ var _vuex = __webpack_require__(/*! vuex */ 14);
 
 var comments = function comments() {
   Promise.all(/*! require.ensure | component/comments/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("component/comments/index")]).then((function () {
-    return resolve(__webpack_require__(/*! ../../../component/comments/index.vue */ 437));
+    return resolve(__webpack_require__(/*! ../../../component/comments/index.vue */ 459));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 
