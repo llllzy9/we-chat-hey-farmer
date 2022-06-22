@@ -35,6 +35,8 @@ export default {
                 phone: '', //电话
                 province: '', //地址
                 city: '', //城市
+                district: '',//区
+                address: '',//详细地址
             },
         }
     },
@@ -82,10 +84,17 @@ export default {
                 uni.showToast({
                     title: '提交成功'
                 })
+                var messageData1 = {
+                    choice: this.cityTitle,
+                    content: this.cityForm.address,
+                    name: this.cityForm.name,
+                    number: this.cityForm.phone,
+                };
                 this.cityTitle = '请选择：省、市、区'
                 this.cityForm = ''
 
             }
+            this.$store.dispatch("addRess", messageData1);
         }
     },
     components: {

@@ -10,6 +10,7 @@
 
         <view class="content">
           <!-- 点击登录按钮 -->
+<<<<<<< HEAD
           <button
             v-if="canIUseGetUserProfile"
             class="bottoms"
@@ -21,6 +22,11 @@
           >
             点击登录
           </button>
+=======
+          <button v-if="canIUseGetUserProfile" class="bottoms" type="primary" withCredentials="true" lang="zh_CN"
+            @click="wxGetUserInfo">
+            点击登录</button>
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
         </view>
       </view>
     </view>
@@ -33,6 +39,7 @@
         <navigator class="cell" url="/pages/center/center_care/index"> 0 <text>关注商品</text> </navigator>
         <navigator class="cell" url="/pages/center/center_foot/index"> 99+ <text>我的足迹</text> </navigator> -->
         <view class="sorts">
+<<<<<<< HEAD
           <navigator
             class="icon-bill"
             v-for="item in moneylist"
@@ -41,6 +48,11 @@
           >
             <image :src="item.icon" mode="widthFix"></image>
             <text style="color: #827f8b">{{ item.name }}</text>
+=======
+          <navigator class="icon-bill" v-for="item in moneylist" :key="item.id" :url="item.url">
+            <image :src="item.icon" mode="widthFix"></image>
+            <text>{{ item.name }}</text>
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
           </navigator>
         </view>
       </view>
@@ -48,6 +60,7 @@
       <view class="orders">
         <view class="title">我的订单</view>
         <view class="sorts">
+<<<<<<< HEAD
           <navigator
             class="icon-bill"
             v-for="item in paylist"
@@ -66,6 +79,14 @@
             <text style="color: #827f8b" class="titlename">{{
               item.name
             }}</text>
+=======
+          <navigator class="icon-bill" v-for="item in paylist" :key="item.id" :url="item.url">
+            <uni-badge class="uni-badge-left-margin" :text="item.value" absolute="rightTop" :offset="[-3, -3]"
+              size="small">
+              <image :src="item.icon" mode="widthFix"></image>
+            </uni-badge>
+            <text class="titlename">{{ item.name }}</text>
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
           </navigator>
         </view>
       </view>
@@ -78,8 +99,15 @@
       </navigator>
       <!-- 其它 -->
       <view class="extra">
+<<<<<<< HEAD
         <button open-type="feedback" class="item icon-arrow">功能反馈</button>
         <button open-type="feedback" class="item icon-arrow">功能反馈</button>
+=======
+
+        <button open-type="contact" show-message-card session-from send-message-path send-message-title
+          class="item icon-arrow"> 在线客服</button>
+        <button open-type="feedback" class="item icon-arrow"> 意见反馈 </button>
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
       </view>
     </view>
   </view>
@@ -98,10 +126,17 @@ export default {
       paylist: [
         {
           id: 1,
+<<<<<<< HEAD
           icon: "../../static/total.png",
           url: "/pages/center/center_totalorder/index",
           name: "全部订单",
           value: 6,
+=======
+          icon: '../../static/total.png',
+          url: '/pages/center/center_totalorder/index',
+          name: "全部订单",
+          value: 6
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
         },
         {
           id: 2,
@@ -117,14 +152,22 @@ export default {
         },
         {
           id: 3,
+<<<<<<< HEAD
           icon: "../../static/waitreceive.png",
           url: "/pages/center/center_waitreceive/index",
           name: "待收货",
         },
+=======
+          icon: '../../static/waitreceive.png',
+          url: '/pages/center/center_waitreceive/index',
+          name: "待收货"
+        }
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
       ],
       moneylist: [
         {
           id: 0,
+<<<<<<< HEAD
           icon: "../../static/money.png",
           url: "/pages/center/center_collection/index",
           name: "钱包",
@@ -142,16 +185,43 @@ export default {
           name: "足迹",
         },
       ],
+=======
+          icon: '../../static/money.png',
+          url: '/pages/center/center_collection/index',
+          name: "钱包"
+        },
+        {
+          id: 1,
+          icon: '../../static/care.png',
+          url: '/pages/center/center_care/index',
+          name: "关注"
+        },
+        {
+          id: 2,
+          icon: '../../static/foot.png',
+          url: '/pages/center/center_foot/index',
+          name: "足迹"
+        },
+      ]
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
     };
   },
   mounted() {
     const timer = setInterval(() => {
       if (this.value >= 199) {
+<<<<<<< HEAD
         clearInterval(timer);
         return;
       }
       this.value++;
     }, 100);
+=======
+        clearInterval(timer)
+        return
+      }
+      this.value++
+    }, 100)
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
   },
 
   methods: {
@@ -340,6 +410,11 @@ export default {
   background-color: #fff;
   border-radius: 6rpx;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
   border-bottom: 6rpx solid #eee;
 
   .sorts {
@@ -361,6 +436,10 @@ export default {
     width: 60rpx;
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
   [class*="icon-"] {
     flex: 1;
     font-size: 24rpx;

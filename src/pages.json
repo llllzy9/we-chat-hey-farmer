@@ -10,14 +10,14 @@
 		"navigationBarTitleText": "Hey!farmer",
 		"navigationBarBackgroundColor": "#00c170",
 		"backgroundColor": "#00c170"
-	  },
+	},
 	"pages": [
 		{
 			"path": "pages/home/index",
 			"style": {
 				"navigationBarTitleText": "首页",
 				"navigationBarBackgroundColor": "#00c170",
-				"navigationStyle":"custom",
+				"navigationStyle": "custom",
 				"enablePullDownRefresh": true
 			}
 		},
@@ -75,7 +75,7 @@
 		{
 			"path": "pages/center/center_collection/index",
 			"style": {
-				"navigationBarTitleText": "收藏"
+				"navigationBarTitleText": "钱包"
 			}
 		},
 		{

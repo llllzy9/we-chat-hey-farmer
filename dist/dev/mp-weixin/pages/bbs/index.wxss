@@ -133,7 +133,8 @@
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.popup-content view:nth-child(1), .popup-content view:nth-child(2) {
+.popup-content view:nth-child(1),
+.popup-content view:nth-child(2) {
   height: 180rpx;
   width: 300rpx;
   border-radius: 30rpx;
@@ -142,19 +143,24 @@
   padding-top: 30rpx;
   box-shadow: 2rpx 7rpx 10rpx rgb(184, 184, 184);
 }
-.popup-content view:nth-child(1) text, .popup-content view:nth-child(2) text {
+.popup-content view:nth-child(1) text,
+.popup-content view:nth-child(2) text {
   line-height: 40rpx;
 }
-.popup-content view:nth-child(1) text:nth-child(1), .popup-content view:nth-child(2) text:nth-child(1) {
+.popup-content view:nth-child(1) text:nth-child(1),
+.popup-content view:nth-child(2) text:nth-child(1) {
   font-size: 32rpx;
   color: #fff;
   font-weight: 600;
 }
-.popup-content view:nth-child(1) text:nth-child(2), .popup-content view:nth-child(2) text:nth-child(2) {
+.popup-content view:nth-child(1) text:nth-child(2),
+.popup-content view:nth-child(2) text:nth-child(2) {
   font-size: 24rpx;
   color: #e8e8e8;
 }
-.popup-content view:nth-child(3), .popup-content view:nth-child(4), .popup-content view:nth-child(5) {
+.popup-content view:nth-child(3),
+.popup-content view:nth-child(4),
+.popup-content view:nth-child(5) {
   height: 150rpx;
   width: 170rpx;
   border-radius: 30rpx;

@@ -1,11 +1,19 @@
 <template>
 	<view class="container">
+<<<<<<< HEAD
 		<u-empty class="noData" :show="recommendlist.length == 0" text="收货地址为空"></u-empty>
+=======
+		<u-empty class="noData" :show="recommendlist1.length == 0" text="收货地址为空"></u-empty>
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
 		<view style="height: 100vh">
 			<swiper-item>
 				<view scroll-y class="sgscroll">
 					<view class="sglist">
+<<<<<<< HEAD
 						<view class="sglist-item" v-for="(item, index) in recommendlist" :key="index">
+=======
+						<view class="sglist-item" v-for="(item, index) in recommendlist1" :key="index">
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
 							<view class="sglist-view">
 								<view class="sglist-title">
 									{{ item.choice }}
@@ -37,10 +45,15 @@
 </template>
  
 <script>
+<<<<<<< HEAD
+=======
+import { mapState } from 'vuex';
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
 export default {
 	data() {
 		return {
 			url: "../../center/center_link",
+<<<<<<< HEAD
 			recommendlist: [
 				{
 					id: 0,
@@ -59,16 +72,33 @@ export default {
 					number: 110119121120,
 				},
 			],
+=======
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
 		}
 	},
 	methods: {
 		remove(index) {
+<<<<<<< HEAD
 			this.recommendlist.splice(index, 1)
+=======
+			this.recommendlist1.splice(index, 1)
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
 		}
 
 	},
+<<<<<<< HEAD
 
 }
+=======
+	computed: {
+		...mapState({
+			recommendlist1: (state) => state.center.recommendlist1,
+		})
+	}
+};
+
+
+>>>>>>> c80de3b9bd7ce38b4f9dfdf5913426be153d4454
 </script>
 			
 <style lang="scss">
