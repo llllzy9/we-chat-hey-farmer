@@ -6,6 +6,7 @@ Vue.use(Vuex);
 import bbs from './bbs';
 import home from './home';
 import shopCar from './shopCar';
+import center  from './center';
 
 
 //state:仓库存储数据的地方
@@ -16,6 +17,6 @@ import shopCar from './shopCar';
 //对外暴露实例
 export default new Vuex.Store({
     modules: {
-        bbs,home,shopCar
+        bbs,home,shopCar,center
     }
 })

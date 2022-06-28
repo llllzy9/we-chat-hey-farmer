@@ -42,37 +42,6 @@
 			}
 		},
 		{
-			"path": "pages/shoplist/index",
-			"style": {
-				"navigationBarTitleText": "商品",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
-			"path": "pages/goodsdetail/index",
-			"style": {
-				"navigationBarTitleText": "商品详情"
-			}
-		},
-		{
-			"path": "pages/pay/index",
-			"style": {
-				"navigationBarTitleText": "支付"
-			}
-		},
-		{
-			"path": "pages/publish/index",
-			"style": {
-				"navigationBarTitleText": "发布"
-			}
-		},
-		{
-			"path": "pages/live/index",
-			"style": {
-				"navigationBarTitleText": "直播"
-			}
-		},
-		{
 			"path": "pages/center/center_collection/index",
 			"style": {
 				"navigationBarTitleText": "钱包"
@@ -131,6 +100,51 @@
 			"style": {
 				"navigationBarTitleText": "文章"
 			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pagesA",
+			"name": "pagesA",
+			"pages": [
+				{
+					"path": "live/index",
+					"style": {
+						"navigationBarTitleText": "直播"
+					}
+				},
+				{
+					"path": "pay/index",
+					"style": {
+						"navigationBarTitleText": "支付"
+					}
+				},
+				{
+					"path": "publish/index",
+					"style": {
+						"navigationBarTitleText": "发布"
+					}
+				}
+			]
+		},
+		{
+			"root": "pagesB",
+			"name": "pagesB",
+			"pages": [
+				{
+					"path": "goodsdetail/index",
+					"style": {
+						"navigationBarTitleText": "商品详情"
+					}
+				},
+				{
+					"path": "shoplist/index",
+					"style": {
+						"navigationBarTitleText": "商品",
+						"enablePullDownRefresh": true
+					}
+				}
+			]
 		}
 	],
 	"globalStyle": {

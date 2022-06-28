@@ -2,7 +2,7 @@
 	<view class="goods-list">
 		<view class="goods-title"></view>
 		<view class="product-list">
-			<navigator class="product" v-for="product in productList" :key="product.id" url="/pages/goodsdetail/index">
+			<navigator class="product" v-for="product in productList" :key="product.id" url="/pagesB/goodsdetail/index">
 				<image :src="product.img" mode="widthFix" class="product-img"></image>
 				<view class="content">
 					<view class="name">{{ product.name }}</view>

@@ -4,11 +4,6 @@
     "pages/bbs/index",
     "pages/shopcar/index",
     "pages/center/index",
-    "pages/shoplist/index",
-    "pages/goodsdetail/index",
-    "pages/pay/index",
-    "pages/publish/index",
-    "pages/live/index",
     "pages/center/center_collection/index",
     "pages/center/center_care/index",
     "pages/center/center_foot/index",
@@ -20,7 +15,25 @@
     "pages/center/center_link/index",
     "pages/bbs/bbs_essay/index"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "live/index",
+        "pay/index",
+        "publish/index"
+      ],
+      "name": "pagesA"
+    },
+    {
+      "root": "pagesB",
+      "pages": [
+        "goodsdetail/index",
+        "shoplist/index"
+      ],
+      "name": "pagesB"
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "Hey!farmer",
@@ -57,5 +70,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "usingComponents": {}
 }

@@ -23,7 +23,7 @@
                <view class="place"></view>
       <view class="listbox">
         <view class="goods-list">
-          <navigator class="goods-item" v-for="item in goodslist" :key="item.id" url="/pages/goodsdetail/index">
+          <navigator class="goods-item" v-for="item in goodslist" :key="item.id" url="/pagesB/goodsdetail/index">
             <view class="goods-view">
               <view class="goods-img"
                 ><image :src="item.img" mode="	aspectFill"></image

@@ -88,12 +88,12 @@
           <view>
             <uni-popup ref="popup">
               <view class="popup-content">
-                <navigator url="/pages/publish/index" hover-class="navigator-hover" class="big">
+                <navigator url="/pagesA/publish/index" hover-class="navigator-hover" class="big">
                   <view class="ask"><text>回答问题</text>
                     <text>潜力、热点问题等你回答</text>
                   </view>
                 </navigator>
-                <navigator url="/pages/publish/index" hover-class="navigator-hover" class="big">
+                <navigator url="/pagesA/publish/index" hover-class="navigator-hover" class="big">
                   <view class="reply">
                     <text>提个问题</text>
                     <text>热心网友为你解答</text>

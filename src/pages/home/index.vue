@@ -30,7 +30,7 @@
           class="grid-item"
           v-for="item in gridList"
           :key="item.id"
-          url="/pages/shoplist/index"
+          url="/pagesB/shoplist/index"
         >
           <image :src="item.icon"></image>
           <text style="color: #827f8b">{{ item.name }}</text>
@@ -45,7 +45,7 @@
           <view class="small">实时监控，隔空操作</view>
         </view>
         <view class="live-video">
-          <navigator url="/pages/live/index">
+          <navigator url="/pagesA/live/index">
           <image src="https://file.uizhw.com/czsj/works/pic/bbfd5289-a399-4eee-9ff2-68058a9dd770.gif" mode="widthFill" ></image>
           </navigator>
         </view>
@@ -59,7 +59,7 @@
           class="product"
           v-for="product in productList"
           :key="product.id"
-          url="/pages/goodsdetail/index"
+          url="/pagesB/goodsdetail/index"
         >
           <image :src="product.img" mode="widthFix"></image>
           <view class="name">{{ product.name }}</view>

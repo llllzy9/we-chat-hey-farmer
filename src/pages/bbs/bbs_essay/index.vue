@@ -79,8 +79,6 @@
 
 <script>
 import comments from "../../../component/comments/index.vue";
-//引入mapState
- import { mapState } from 'vuex'
 export default {
   name: "WeChatHeyFarmerIndex",
   components: {

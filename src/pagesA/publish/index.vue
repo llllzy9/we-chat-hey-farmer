@@ -22,7 +22,7 @@
         </view>
         <view class="pblBtn">
           <navigator
-            url="/pages/bbs/index"
+            url="/pagesA/bbs/index"
             open-type="switchTab"
             @click="publish"
             ><text>发布</text></navigator

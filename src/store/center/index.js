@@ -5,15 +5,15 @@ const state = {
             choice: "湖北省-天门市-天门",
             content:
                 "天门外国语学校高中部",
-            name: "安光耀",
+            name: "xx耀",
             number: 15527561217,
         },
         {
             id: 1,
             choice: "湖北省-武汉市-洪山区",
             content:
-                "武昌首义学院高架桥旁11栋教学楼菜鸟驿站",
-            name: "李章源",
+                "xxxxxxx菜鸟驿站xxxxxxxxxxxxxxxxxxx",
+            name: "李xx",
             number: 110119121120,
         },
     ]

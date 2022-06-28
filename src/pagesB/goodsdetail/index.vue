@@ -161,7 +161,7 @@ export default {
     },
     goto() {
       uni.navigateTo({
-        url: "/pages/shoplist/index",
+        url: "/pagesB/shoplist/index",
       });
     },
     buttonClick(e) {

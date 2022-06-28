@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "直播",
-  "usingComponents": {
-    "uni-segmented-control": "/node-modules/@dcloudio/uni-ui/lib/uni-segmented-control/uni-segmented-control",
-    "uni-fab": "/node-modules/@dcloudio/uni-ui/lib/uni-fab/uni-fab",
-    "uni-card": "/node-modules/@dcloudio/uni-ui/lib/uni-card/uni-card",
-    "uni-icons": "/node-modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons"
-  }
-}

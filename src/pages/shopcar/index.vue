@@ -17,7 +17,7 @@
                 ></checkbox-group>
               </view>
               <view class="goods-detail">
-                <navigator class="goodsImg" url="/pages/goodsdetail/index">
+                <navigator class="goodsImg" url="/pagesB/goodsdetail/index">
                   <image :src="item.img" mode="aspectFill"></image>
                 </navigator>
                 <view class="goodsInfo">
@@ -32,7 +32,7 @@
                 <view class="numSub" @click="changeNum(false, index)">
                   <text style="font-weight: bold; font-size: 32rpx">-</text>
                 </view>
-                <view class="num">{{ item.num }}</view>
+                <view class="num">{{ item.num }}月</view>
                 <view class="numAdd" @click="changeNum(true, index)">
                   <text style="font-weight: bold; font-size: 32rpx">+</text>
                 </view>
